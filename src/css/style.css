@@ -16,8 +16,26 @@
   font-display: swap;
 }
 
+:root {
+  /* colors */
+  --clr-primary: hsl(4, 100%, 67%);
+  --clr-secondary: hsl(234, 29%, 20%);
+  --clr-grey-med: hsl(235, 18%, 26%);
+  --clr-grey-light: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+  /* typography */
+  --ff-ss: 'Roboto', sans-serif;
+  --fw-r: 400;
+  --fw-b: 700;
+  --fs-1: 0.75rem;
+  --fs-2: 1rem;
+  --fs-3: 2.5rem;
+  --fs-4: 3.5rem;
+  --fs-fluid: clamp(var(--fs-3), 2vw + 1.75rem, var(--fs-4));
+}
+
 body {
-  font-family: Roboto;
+  font-family: var(--ff-ss);
 }
 
 
