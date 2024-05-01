@@ -34,18 +34,65 @@
   --fs-fluid: clamp(var(--fs-3), 2vw + 1.75rem, var(--fs-4));
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
 body {
+  min-height: 100vh;
+  line-height: 1.5;
   font-family: var(--ff-ss);
 }
 
+h1,
+h2,
+button,
+input,
+label {
+  line-height: 1.1;
+}
 
+h1,
+h2 {
+  text-wrap: balance;
+}
 
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.footer {
+  display: none;
+}
 
 .attribution {
-  font-size: 11px;
+  font-size: var(--fs-1);
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--clr-white);
 }
