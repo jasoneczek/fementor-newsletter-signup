@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Roboto';
-  src: url('../../assets/fonts/Roboto-Bold.woff2') format('woff2'),
+  src: url('../../assets/fonts/Roboto-Regular.woff2') format('woff2'),
     url('../../assets/fonts/Roboto-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
@@ -48,10 +48,20 @@ html {
   text-size-adjust: none;
 }
 
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
 body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: var(--ff-ss);
+  background-color: var(--clr-grey-med);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -84,6 +94,115 @@ button {
   font-size: inherit;
 }
 
+/* Card */
+.card {
+  background-color: var(--clr-white);
+  max-width: 58rem;
+  display: grid;
+  /* min-height: 100svh; */
+}
+
+.card__img-wrapper {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.card__content {
+  padding: 2.5rem 1.5rem;
+  font-size: var(--fs-2);
+  font-weight: var(--fw-r);
+}
+
+/* card header area */
+.card__heading {
+  font-size: var(--fs-fluid);
+  font-weight: var(--fw-b);
+}
+
+.card__lead {
+  margin-block: 1.5rem;
+}
+
+/* benefits list */
+.card__benefits-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2.5rem;
+}
+
+.card__list-item {
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+.card__list-item:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+
+.card__list-item::before {
+  content: "";
+  position: absolute;
+  top: 0.625rem;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url('../../assets/images/icon-list.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* form */
+.form__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__email-label {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-b);
+}
+
+.form__error {
+  font-size: var(--fs-1);
+  color: var(--clr-primary);
+  font-weight: var(--fw-b);
+}
+
+.form__email-input {
+  padding: 1.125em 1.5em;
+  width: 100%;
+  border: 1px solid var(--clr-grey-light);
+  border-radius: 0.5rem;
+  margin-top: 0.625rem;
+  margin-bottom: 1.5rem;
+}
+
+.form__email-input::placeholder {
+  color: var(--clr-grey-light);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1.125em;
+  border-radius: 0.5rem;
+  color: var(--clr-white);
+  font-weight: var(--fw-b);
+  background-color: var(--clr-secondary);
+}
+
+/* Success content */
+.success {
+  display: none;
+  background-color: var(--clr-white);
+}
+
+/* Footer */
 .footer {
   display: none;
 }
