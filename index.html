@@ -17,33 +17,32 @@
       <div class="card__img-wrapper">
         <picture>
           <source media="(min-width: 36rem)" srcset="./assets/images/illustration-sign-up-desktop.svg">
-          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="dashboard">
         </picture>
       </div>
       <div class="card__content">
         <h2 class="card__heading">Stay updated!</h2>
         <p class="card__lead">Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="card__updates-list">
-          <li class="card__list-item">
-            <img src="./assets/images/icon-list.svg" alt="">
+        <ul class="card__benefits-list">
+          <li class="card__list-item" role="list-item">
             Product discovery and building what matters
           </li>
-          <li class="card__list-item">
-            <img src="./assets/images/icon-list.svg" alt="">
+          <li class="card__list-item" role="list-item">
             Measuring to ensure updates are a success
           </li>
-          <li class="card__list-item">
-            <img src="./assets/images/icon-list.svg" alt="">
+          <li class="card__list-item" role="list-item">
             And much more!
           </li>
         </ul>
         <!-- Sign-up form start -->
         <form action="#" method="get" class="card__signup-form" id="signupForm" novalidate>
           <div>
-            <label for="email" class="form__email-label">Email address</label>
-            <span id="error" role="alert">Valid email required</span>
-            <input id="email" name="email" type="email" class="form__email-input" placeholder="email@company.com"
-              autocomplete>
+            <div class="form__label">
+              <label for="email" class="form__email-label">Email address</label>
+              <span id="error" class="form__error" role="alert">Valid email required</span>
+            </div>
+            <input id="email" name="email" type="email" class="form__email-input" aria-describedby="error"
+              placeholder="email@company.com" autocomplete>
           </div>
           <button type="submit" class="btn btn-submit">Subscribe to monthly newsletter</button>
         </form>
