@@ -117,7 +117,8 @@ button {
   background-color: var(--clr-white);
   max-width: 100%;
   margin: 0 auto;
-  display: none;
+  display: grid;
+  /* display: none; */
 }
 
 .card__img-wrapper {
@@ -246,9 +247,9 @@ button {
 
 /* Success content */
 .success {
-  /* display: none; */
+  display: none;
   min-height: 100vh;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -289,4 +290,29 @@ button {
 
 .attribution a {
   color: var(--clr-white);
+}
+
+@media (min-width: 48rem) {
+  .card {
+    width: min(58rem, 100% - 3rem);
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 25rem);
+    grid-template-areas: "aa bb";
+    gap: 4rem;
+    border-radius: 2.25rem;
+  }
+
+  .col-1 {
+    grid-area: aa;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .col-2 {
+    grid-area: bb;
+    justify-self: end;
+  }
 }
