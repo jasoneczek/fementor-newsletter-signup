@@ -13,8 +13,7 @@
 
   <main>
 
-    <div class="card">
-
+    <div id="card" class="card">
       <picture class="col-2">
         <source media="(min-width: 36rem)" srcset="./assets/images/illustration-sign-up-desktop.svg">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="dashboard">
@@ -35,23 +34,23 @@
           </li>
         </ul>
         <!-- Sign-up form start -->
-        <form action="#" method="get" class="card__signup-form" id="signupForm" novalidate>
+        <form action="#" method="get" class="card__signup-form" id="form" novalidate>
           <div>
             <div class="form__label">
               <label for="email" class="form__email-label">Email address</label>
-              <span id="error" class="form__error" role="alert">Valid email required</span>
+              <span id="error" class="form__error" role="alert"></span>
             </div>
             <input id="email" name="email" type="email" class="form__email-input" aria-describedby="error"
               placeholder="email@company.com" autocomplete="email">
           </div>
-          <button type="submit" class="btn">Subscribe to monthly newsletter</button>
+          <button type="submit" id="submitBtn" class="btn">Subscribe to monthly newsletter</button>
         </form>
         <!-- Sign-up form end -->
       </div>
     </div>
 
     <!-- Success message start -->
-    <div id="successMessage" class="success">
+    <div id="success" class="success">
       <div class="success__content">
         <img src="./assets/images/icon-success.svg" alt="check" class="success__check">
         <h2 class="success__heading">Thanks for subscribing!</h2>
