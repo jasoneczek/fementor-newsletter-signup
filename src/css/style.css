@@ -102,7 +102,7 @@ a:not([class]) {
 
 img,
 picture {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -231,6 +231,7 @@ button {
   font-weight: var(--btn-fw);
   background-color: var(--btn-bg);
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
 .btn:hover {
