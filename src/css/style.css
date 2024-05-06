@@ -301,7 +301,6 @@ button {
     grid-template-areas: "aa bb";
     gap: 4rem;
     border-radius: 2.25rem;
-    display: none;
   }
 
   .col-1 {
@@ -318,12 +317,16 @@ button {
   }
 
   .success {
-    /* display: none; */
-    display: flex;
+    display: none;
+    /* display: flex; */
     min-height: auto;
     max-width: 31.5rem;
     padding: 3rem 4rem 4rem;
     gap: 2.25rem;
     border-radius: 2.25rem;
+  }
+
+  .footer {
+    display: block;
   }
 }
