@@ -17,6 +17,7 @@ const handleSubmit = (e) => {
     const isValidEmail = validateEmail(emailAddress);
 
     if (isValidEmail) {
+      email.classList.remove("input-error");
       card.style.display = "none";
       success.style.display = "flex";
     } else {
@@ -41,6 +42,13 @@ const dismissSuccess = () => {
   card.style.display = "grid";
   success.style.display = "none";
 };
+
+email.addEventListener("input", () => {
+  if (email.classList.contains("input-error")) {
+    email.classList.remove("input-error");
+    error.textContent = "";
+  }
+});
 
 form.addEventListener("submit", handleSubmit);
 dismissBtn.addEventListener("click", dismissSuccess);
