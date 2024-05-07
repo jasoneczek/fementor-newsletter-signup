@@ -208,10 +208,6 @@ button {
   color: var(--clr-grey-light);
 }
 
-.form__email-input:focus {
-  outline: 1px solid var(--input-border-focus);
-}
-
 .input-error {
   color: var(--clr-primary);
   border: 1px solid var(--clr-primary);
@@ -221,6 +217,10 @@ button {
     var(--clr-primary-l),
     0.15
   );
+}
+
+.form__email-input:focus {
+  outline: 1px solid var(--input-border-focus);
 }
 
 .btn {
@@ -235,10 +235,11 @@ button {
   cursor: pointer;
   overflow: hidden;
   transition: box-shadow 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .btn::before {
-  content: "Subscribe to monthly newsletter";
+  content: "";
   position: absolute;
   padding-top: 1.125em;
   top: 0;
@@ -248,6 +249,7 @@ button {
   background: var(--btn-bg-hover);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  z-index: -1;
 }
 
 .btn:hover::before {
