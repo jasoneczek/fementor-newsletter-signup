@@ -80,6 +80,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 h1,
@@ -193,6 +194,7 @@ button {
   font-size: var(--fs-1);
   color: var(--clr-error-text);
   font-weight: var(--fw-b);
+  line-height: 1.1;
 }
 
 .form__email-input {
@@ -217,6 +219,10 @@ button {
     var(--clr-primary-l),
     0.15
   );
+}
+
+.input-error::placeholder {
+  color: var(--clr-primary);
 }
 
 .form__email-input:focus {
@@ -348,5 +354,17 @@ button {
 
   .footer {
     display: block;
+    position: absolute;
+    bottom: 1em;
+    color: var(--clr-grey-light);
+  }
+
+  .footer a {
+    transition: 0.2s ease-in-out;
+    color: var(--clr-grey-light);
+  }
+
+  .footer a:hover {
+    color: var(--clr-primary);
   }
 }
