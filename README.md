@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://jasoneczek-newsletter-signup.vercel.app/)
 - Live Site URL: [Live](https://jasoneczek-newsletter-signup.vercel.app/)
 
 ## My process
